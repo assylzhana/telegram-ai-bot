@@ -1,11 +1,9 @@
 package com.ai.telegramaibot.openAI;
 
-import lombok.RequiredArgsConstructor;
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
-@RequiredArgsConstructor
-public class ChatCompletionObject {
+public record ChatCompletionObject (
+       @JsonProperty("choices") List<Choice> choices
+){}
 
-    private final List<Choice> choices;
-}

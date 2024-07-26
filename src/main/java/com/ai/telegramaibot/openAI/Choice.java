@@ -1,8 +1,7 @@
 package com.ai.telegramaibot.openAI;
 
-import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor
-public class Choice {
-    private final Message message;
-}
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public record Choice (
+        @JsonProperty("message")  Message message) {}

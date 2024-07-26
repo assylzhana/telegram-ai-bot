@@ -1,11 +1,9 @@
 package com.ai.telegramaibot.openAI;
 
-import lombok.RequiredArgsConstructor;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public record Message (@JsonProperty("role")  String role,
+    @JsonProperty("content") String content){}
 
 
-@RequiredArgsConstructor
-public class Message {
-    private final String role;
-    private final String content;
-
-}
